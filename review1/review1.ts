@@ -1,5 +1,18 @@
 import data from "./todos.json";
 
+data;
+
+interface DataFile {
+  todos: Todo[];
+}
+
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
 interface ToDo {
   userId: number;
   id: number;
@@ -21,6 +34,8 @@ const typedTodos: ToDo[] = data.todos;
 
 let todo1: ToDo = typedTodos[0];
 let todo2: ToDo = typedTodos[1];
+
+typedTodos.sort((a, b) => a.userId - b.userId);
 
 typedTodos.toSorted((a, b) => a.userId - b.userId); // .toSorted()
 
