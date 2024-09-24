@@ -8,6 +8,7 @@ interface ChannelPreferences {
   bbc2: Preferences;
   bbcNews: Preferences;
   bbcParliament: Preferences;
+  bbcSport: Preferences;
   // ...
 }
 
@@ -17,6 +18,12 @@ interface ChannelPreferencesDict {
   [channel: string]: Preferences;
 }
 
+const user1: ChannelPreferencesDict = {
+  bbc1: {},
+  "sky sport": { volume: 3, subtitles: false },
+};
+
 const preferenceMap = new Map<Channels, Preferences>();
 
+preferenceMap.set("bbcNews", { volume: 2, subtitles: false });
 // preferenceMap.has()
