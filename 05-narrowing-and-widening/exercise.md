@@ -1,7 +1,3 @@
-To integrate generics into the lab, you can introduce exercises that allow students to work with generics in functions, interfaces, or classes. Here's an updated version of the lab, including a section on generics:
-
----
-
 # Practice Lab - TypeScript Inference, Type Annotations, and Generics
 
 In this module, we explored TypeScript's type inference system, explicit type annotations, and the appropriate use of generics. Each exercise is designed to enhance your understanding of when and how to use TypeScript’s type system effectively. Follow the instructions for each task and ensure to run and compile your code to see the results.
