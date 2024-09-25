@@ -19,7 +19,7 @@ function handleResponse(response: ApiResponse) {
       console.log("Error:", response.message);
       break;
     default:
-      const _exhaustiveCheck: never = response;
+      const _exhaustiveCheck = response;
       return _exhaustiveCheck;
   }
 }

@@ -44,13 +44,17 @@ function pickFruit(fruit: Apple | Orange) {
   fruit;
 }
 
-interface UploadEvent {
+interface Events {
+  type: "upload" | "download";
+}
+
+interface UploadEvent extends Events {
   type: "upload";
   filename: string;
   contents: string;
 }
 
-interface DownloadEvent {
+interface DownloadEvent extends Events {
   type: "download";
   filename: string;
 }
