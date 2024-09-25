@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { hash } = require("node:crypto");
 const path = require("node:path");
 
 module.exports = {
@@ -17,11 +18,14 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./src/index.html"
+			template: "./src/index.html",
+			minify: false,
+
 		})
 	],
 	output: {
-		filename: "bundle.js",
-		path: path.resolve(__dirname, "dist")
+		filename: "output.js",
+		path: path.resolve(__dirname, "dist"),
+		clean: true
 	}
 }
