@@ -1,28 +1,29 @@
-var PI = 3.14;
+import { Circle, Rectangle, Square, RightTriangle, Shape } from "./shape.lib";
+const PI = 3.14;
 
-function getCircleArea(circle) {
-  var radius = circle.radius;
+function getCircleArea(circle: Circle) {
+  const radius = circle.radius;
   return radius * radius * PI;
 }
 
-function getRectangleArea(rectangle) {
-  var length = rectangle.length;
-  var width = rectangle.width;
+function getRectangleArea(rectangle: Rectangle) {
+  const length = rectangle.length;
+  const width = rectangle.width;
   return length * width;
 }
 
-function getSquareArea(square) {
-  var width = square.width;
+function getSquareArea(square: Square) {
+  const width = square.width;
   return width * width;
 }
 
-function getRightTriangleArea(triangle) {
-  var base = triangle.base;
-  var height = triangle.height;
+function getRightTriangleArea(triangle: RightTriangle) {
+  const base = triangle.base;
+  const height = triangle.height;
   return (base * height) / 2;
 }
 
-function getArea(shape) {
+function getArea(shape: Shape) {
   switch (shape.type) {
     case "circle":
       shape.area = getCircleArea(shape);
@@ -39,19 +40,20 @@ function getArea(shape) {
   }
 }
 
-var circle = { type: "circle", radius: 4 };
+// Client code
+const circle: Circle = { type: "circle", radius: 4 };
 getArea(circle);
 console.log(circle);
 
-var rectangle = { type: "rectangle", length: 7, width: 4 };
+const rectangle: Rectangle = { type: "rectangle", length: 7, width: 4 };
 getArea(rectangle);
 console.log(rectangle);
 
-var square = { type: "square", width: 5 };
+const square: Square = { type: "square", width: 5 };
 getArea(square);
 console.log(square);
 
-var rightTriangle = {
+const rightTriangle: RightTriangle = {
   type: "rightTriangle",
   base: 9,
   height: 4,
@@ -59,7 +61,7 @@ var rightTriangle = {
 getArea(rightTriangle);
 console.log(rightTriangle);
 
-var triangle = {
+const triangle: RightTriangle = {
   type: "rightTriangle",
   base: 10,
   height: 5,
