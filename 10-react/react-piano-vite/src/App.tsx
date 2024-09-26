@@ -4,7 +4,7 @@ import { Main } from "./components/Main"
 import './App.css'
 
 function App() {
-
+  // Presentational!
   return (
     <div className="app">
       <Logo />

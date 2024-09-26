@@ -13,6 +13,7 @@ Notice any that we haven't.
 - Do you think TS is too much?
 - As a new dev to this project, would you know how to add to it?
 - Does TS help or hinder that?
+- Break it, fix it, play with it ...
 
 # Why is TS for React Developers?
 
@@ -21,6 +22,6 @@ Notice any that we haven't.
 - Documentation and maintainability
 - Enhanced code quality
 - Interoperable with JS
-
 - Reduce Testing
-- Typed understand data structure
+- ~~Typed understand data structure~~
+-
