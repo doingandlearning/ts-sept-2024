@@ -53,12 +53,17 @@
 {
   // Exercise 5: Add types to this function so that the types of
   // the uses in the test cases is correct and not any.
+  interface User {
+    username: string;
+    email: string;
+  }
 
-  function filterItems<T>(arr: T[], predicate: (item: T) => boolean) {
+  function filterItems<T>(arr: T[], predicate: (item: T) => boolean): T[] {
     return arr.filter(predicate);
   }
 
   // Test cases
+
   const mixedArray = [
     1,
     "hello",
@@ -67,12 +72,21 @@
     "world",
   ];
 
-  const numbers = filterItems(mixedArray, (item) => typeof item === "number");
-  const strings = filterItems(mixedArray, (item) => typeof item === "string");
-  const users = filterItems(
-    mixedArray,
-    (item) => item && item.username && item.email
-  );
+  function testAsNumber(item: unknown): item is number {
+    return typeof item === "number";
+  }
+  function testAsString(item: unknown): item is string {
+    return typeof item === "string";
+  }
+
+  function testAsUser(item: unknown): item is User {
+    if (!item) return false;
+    return typeof item === "object" && "username" in item && "email" in item;
+  }
+
+  const numbers = filterItems(mixedArray, testAsNumber);
+  const strings = filterItems(mixedArray, testAsString);
+  const users = filterItems(mixedArray, testAsUser);
 
   // Output the results
   console.log("Numbers: ", numbers); // Expected: [1, 2]

@@ -61,8 +61,12 @@ interface DownloadEvent extends Events {
 
 type AppEvent = UploadEvent | DownloadEvent;
 
+function isUploadEvent(e: AppEvent): e is UploadEvent {
+  return "contents" in e;
+}
+
 function handleEvent(e: AppEvent) {
-  if ("contents" in e) {
+  if (isUploadEvent(e)) {
     e;
   } else {
     e;
