@@ -4,7 +4,7 @@
 - Kevin Cunningham: https://kevincunningham.co.uk kevin@kevincunningham.co.uk
 
 - Miro Board: https://miro.com/app/board/uXjVLbthlKQ=/
-- Feedback form:
+- Feedback form: https://forms.microsoft.com/Pages/ResponsePage.aspx?id=e_W03kuia0Of7lReNqN5xmk5rXZ1BDVDojjME-DIjrdURVhXSDBDUVRJNFc4WlVDMVRYRDBSUEpETiQlQCN0PWcu
 
 # Timings
 
@@ -38,6 +38,6 @@ Unit 10: React - exploring a React project and seeing how TS is used, using gene
 
 Unit 11: Error handling - Considering our error handling approach
 
-Unit 12: Creating types from others - utilities, string literals, keyin, keyof, record
+Unit 12: Creating types from others - utilities, conditional, string literals, keyin, keyof, record
 
 Unit 13: Testing - What are the testing solutions in TS?

@@ -1,6 +1,8 @@
+type UserID = number;
+
 // Choose an error handling method and implement it.
 class API {
-  getLoggedInUserID(): UserID;
+  getLoggedInUserID(): UserID {}
   getFriendIDs(userID: UserID): UserID[];
   getUserName(userID: UserID): string;
 }
